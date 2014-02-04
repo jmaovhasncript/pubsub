@@ -1,0 +1,35 @@
+body{
+    background-color: #a1a1a1;
+    width: 100%;
+
+}
+
+.publisherContainer {
+
+   text-align: center;
+    width: 300px;
+    height: 100px;
+    color: black;
+    margin: auto;
+    margin-top: 100px;
+    border :1px solid;
+}
+
+#publisher {
+    position: relative;
+    top: 10px;
+}
+
+.subscriber {
+    margin-left: 20px;
+    width: 200px;
+    margin: 50px;
+}
+.subs {
+    margin-top: 20px;
+    float: left;
+    width: 300px;
+    text-align: center;
+    border: 1px solid;
+    margin-left: 20px;
+}

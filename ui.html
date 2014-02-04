@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pubSub</title>
+    <link href="pubsub.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <div class="publisherContainer">Publisher
+        <div id="publisher"></div>
+    </div>
+
+</div>
+<script src="mediator.js"></script>
+<script src="publisher.js"></script>
+<script src="subscriber.js"></script>
+
+<script>
+
+
+    function createView() {
+        var element = document.createDocumentFragment();
+        var div = document.createElement('div');
+        div.className = "pubSub";
+        var inputbox = document.createElement('input');
+        inputbox.className = "input";
+        div.appendChild(inputbox);
+        var sendButton = document.createElement('button');
+        sendButton.id = "send"
+        sendButton.innerText = "send";
+        div.appendChild(sendButton);
+        element.appendChild(div);
+        return element;
+    }
+    var publisherObj
+    (function addPublisher() {
+        publisherObj = new publisher(createView());
+    })()
+    // var publisherObj = new publisher();
+    //publisherObj.recieveMessage("hello") ;
+    var subobj1 = new subscriber("message");
+    subobj1.subScribe();
+    var subobj2 = new subscriber("mobile");
+    subobj2.subScribe();
+    // subobj2.unSubscribe();
+
+</script>
+</body>
+</html>
